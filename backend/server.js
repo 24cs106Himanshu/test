@@ -8,8 +8,10 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-    "https://second-orcin.vercel.app"
+    "https://second-orcin.vercel.app",
+    "https://second-9kzst70t5-24cs106himanshus-projects.vercel.app"
   ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 

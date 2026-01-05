@@ -23,11 +23,11 @@ export class AuthService {
   }
 
   signup(data: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/signup`, data);
+    return this.http.post(`${this.apiUrl}/signup`, data, { withCredentials: false });
   }
 
   signin(email: string, password: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/signin`, { email, password });
+    return this.http.post(`${this.apiUrl}/signin`, { email, password }, { withCredentials: false });
   }
 
   logout() {
